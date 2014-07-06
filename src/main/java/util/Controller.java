@@ -8,7 +8,18 @@ import java.io.IOException;
 
 public class Controller extends HttpServlet {
 
-    String newText;
+    public String getNewText() {
+        return newText;
+    }
+
+    public void setNewText(String newText) {
+        this.newText = newText;
+    }
+
+    private String newText;
+
+    public Controller() {
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -18,8 +29,6 @@ public class Controller extends HttpServlet {
         req.setAttribute("text", text);
         req.getRequestDispatcher("/WEB-INF/Result.jsp").forward(req, resp);
         newText = text;
-        //System.out.println(newText);
-
     }
 
     @Override
