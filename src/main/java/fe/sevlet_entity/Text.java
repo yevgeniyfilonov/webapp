@@ -7,16 +7,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Text extends Controller {
+    String line = getNewText();
+    List<String> list;
+
     public String parserText() {
-        // String to be scanned to find the pattern.
-        String line = getNewText();
-        List<String> list = null;
         for (int i = 0; i < line.length(); i++) {
-            Pattern r = Pattern.compile("[a-zA-Z]+");
-            // Now create matcher object.
-            Matcher m = r.matcher(line);
-            list.add(m.toString());
+            line.split("/t/n");
+            list.add(line);
         }
         return line;
     }
 }
+
+/*Pattern r = Pattern.compile("[a-zA-Z]+");
+*Matcher m = r.matcher(sLine);
+list.add(m.toString());*/
