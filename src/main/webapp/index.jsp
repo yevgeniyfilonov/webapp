@@ -13,6 +13,5 @@
 <body>
 <h2>WelcomE</h2>
 <a href="default.jsp">Start</a>
-
 </body>
 </html>

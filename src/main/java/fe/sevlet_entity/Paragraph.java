@@ -2,16 +2,16 @@ package fe.sevlet_entity;
 
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class Paragraph extends Text {
-    String pLine = getNewText();
-    List<String> pList;
+    List<String> sentanseList;
+    public static final Pattern sentansePattern = Pattern.compile("/.");
 
-    public String parserParagraph() {
-        for (int i = 0; i < pLine.length(); i++) {
-            pLine.split("/.");
-            pList.add(pLine);
+    public void parserParagraph() {
+        for (int i = 0; i < line.length(); i++) {
+            sentansePattern.split(line);
+            sentanseList.add(line);
         }
-        return pLine;
     }
 }

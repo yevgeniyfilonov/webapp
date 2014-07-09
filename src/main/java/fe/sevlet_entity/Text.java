@@ -3,22 +3,17 @@ package fe.sevlet_entity;
 import util.Controller;
 
 import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Text extends Controller {
-    String line = getNewText();
-    List<String> list;
+     public final String line = getNewText();
+     List<String> paragraphList;
+    private static final Pattern paragraphPattern = Pattern.compile("/t/n");
 
-    public String parserText() {
+    public void parserText() {
         for (int i = 0; i < line.length(); i++) {
-            line.split("/t/n");
-            list.add(line);
+            paragraphPattern.split(line);
+            paragraphList.add(line);
         }
-        return line;
     }
 }
-
-/*Pattern r = Pattern.compile("[a-zA-Z]+");
-*Matcher m = r.matcher(sLine);
-list.add(m.toString());*/

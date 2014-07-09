@@ -1,18 +1,18 @@
 package fe.sevlet_entity;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class Word extends Sentanse {
-    String wLine = getNewText();
-    List<String> wList;
+     List<String> charList;
+    private static final Pattern charPatern = Pattern.compile("[a-zA-Zа-яА-Я0-9-+.,!@#$%^&*();\\/|<>\"':?=]");
 
-    public String parserWord() {
-        for (int i = 0; i < wLine.length(); i++) {
-            wLine.split("[a-zA-Zа-яА-Я0-9-+.,!@#$%^&*();\\/|<>\"':?=]");
-            wList.add(wLine);
+    public void parserWord() {
+        for (int i = 0; i < line.length(); i++) {
+            charPatern.split(line);
+            charList.add(line);
         }
-        return wLine;
-
+        System.out.println(charList);
     }
 
 }
