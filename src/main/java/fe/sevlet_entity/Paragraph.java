@@ -15,3 +15,5 @@ public class Paragraph extends Text {
         }
     }
 }
+//sh+ctr+alt+U
+//абстрактные классы
