@@ -1,4 +1,4 @@
-package util;
+package action;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,12 +25,12 @@ public class Controller extends HttpServlet {
         req.setAttribute("text", text);
         newText = text;
         req.getRequestDispatcher("/WEB-INF/Result.jsp").forward(req, resp);
-
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //super.doGet(req, resp);not use
     }
+
 }
 
