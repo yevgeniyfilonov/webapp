@@ -1,4 +1,6 @@
-package action;
+package fe.action;
+
+import fe.sevlet_entity.Text;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -8,14 +10,6 @@ import java.io.IOException;
 
 public class Controller extends HttpServlet {
 
-    private String newText;
-
-    public Controller() {
-    }
-
-    public String getNewText() {
-        return newText;
-    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,7 +17,7 @@ public class Controller extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         String text = req.getParameter("text");
         req.setAttribute("text", text);
-        newText = text;
+        Text sourceText = new ParseText(text);
         req.getRequestDispatcher("/WEB-INF/Result.jsp").forward(req, resp);
     }
 

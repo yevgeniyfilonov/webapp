@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>TomcatServlet</servlet-name>
-        <servlet-class>action.Controller</servlet-class>
+        <servlet-class>fe.action.Controller</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>TomcatServlet</servlet-name>
