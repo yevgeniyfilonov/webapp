@@ -12,7 +12,7 @@ public class ParseText extends Text {
     }
 
     public static List<Paragraph> parseParagraph(String text) {
-        List<Paragraph> paragraphs = new ArrayList<>();
+        List<Paragraph> paragraphs = new ArrayList<Paragraph>();
         String[] strings = text.split("(?<=[\r\n])(?=[^\r\n])");
         for (String string : strings) {
             paragraphs.add(new Paragraph(string));
