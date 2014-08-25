@@ -35,24 +35,31 @@
             </div>
             <div class="fotter-article">
                 <span class="autor">Автор статьи: <a href="#">автор</a></span>
-                <span class="read"><a href="javascript:void(0);">Читать...</a></span>
                 <span class="date-article">Дата статьи: ().().()</span>
-            </div>
-        </article>
-        <article>
-            <h1>Статья</h1>
-
-            <div class="text-article">
-                Текст статьи
-            </div>
-            <div class="fotter-article">
-                <span class="autor">Автор статьи: <a href="#">автор</a></span>
-                <span class="read"><a href="javascript:void(0);">Читать...</a></span>
-                <span class="date-article">Дата статьи: ().().()</span>
-
             </div>
         </article>
     </section>
+</div>
+<div class="fotter-article">
+    <span class="autor">Автор статьи: <a href="#">автор</a></span>
+    <span class="read"><a href="javascript:void(0);">Читать...</a></span>
+    <span class="date-article">Дата статьи: ().().()</span>
+</div>
+</article>
+<article>
+    <h1>Статья</h1>
+
+    <div class="text-article">
+        Текст статьи
+    </div>
+    <div class="fotter-article">
+        <span class="autor">Автор статьи: <a href="#">автор</a></span>
+        <span class="read"><a href="javascript:void(0);">Читать...</a></span>
+        <span class="date-article">Дата статьи: ().().()</span>
+
+    </div>
+</article>
+</section>
 </div>
 <footer>
     <div>
