@@ -1,5 +1,8 @@
 package fe.controler;
 
+import fe.entity.Articles;
+
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,9 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "web_controller", urlPatterns = {"/article", "/registration"})
-public class web_controller extends HttpServlet {
-
+@WebServlet(name = "Webcontroller", urlPatterns = {"/article", "/registration"})
+public class WebController extends HttpServlet {
+    @EJB
+    Articles articles;
+    @Override
+    public void init() throws ServletException {
+        getServletContext().setAttribute("articles", articles.getArticlesCollection());
+    }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -21,7 +29,7 @@ public class web_controller extends HttpServlet {
             //TODO: обработка запроса регистрации
         }
 
-        request.getRequestDispatcher("/WEB-INF/views" + userPath + ".jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view" + userPath + ".jsp").forward(request, response);
     }
 
     /**

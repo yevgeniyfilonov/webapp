@@ -38,15 +38,38 @@
         </dependency>
 
         <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
             <version>3.2.0</version>
         </dependency>
 
         <dependency>
+            <groupId>mm-mysql</groupId>
+            <artifactId>mm-mysql</artifactId>
+            <version>2.0.13</version>
+        </dependency>
+
+
+        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.181</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>annotations-api</artifactId>
+            <version>6.0.29</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.ejb</groupId>
+            <artifactId>javax.ejb-api</artifactId>
+            <version>3.2</version>
         </dependency>
 
     </dependencies>

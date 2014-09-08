@@ -1,0 +1,8 @@
+<%@ page pageEncoding="UTF-8" %>
+<footer>
+    <div>
+        <span>Тестовое приложение JAVA EE</span>
+    </div>
+</footer>
+</body>
+</html>

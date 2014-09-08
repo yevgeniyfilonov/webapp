@@ -1,20 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Главная страница блога</title>
-</head>
-<body>
-<header>
-    <a href="/"><img alt="Логотип" id="top-image" src="#"/></a>
-
-    <div id="user-panel">
-        <a href="#"><img alt="Иконка юзера" scr=""/></a>
-        <a href="javascript:void(0);">[Панель для юзера]</a>
-    </div>
-</header>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="main">
     <aside class="leftAside">
         <h2>Темы статей</h2>
@@ -27,37 +11,18 @@
         </ul>
     </aside>
     <section>
-        <article>
-            <h1>Статья</h1>
-
-            <div class="text-article">
-                Текст статьи
-            </div>
-            <div class="fotter-article">
-                <span class="autor">Автор статьи: <a href="#">автор</a></span>
-                <span class="read"><a href="javascript:void(0);">Читать...</a></span>
-                <span class="date-article">Дата статьи: ().().()</span>
-            </div>
-        </article>
-        <article>
-            <h1>Статья</h1>
-
-            <div class="text-article">
-                Текст статьи
-            </div>
-            <div class="fotter-article">
-                <span class="autor">Автор статьи: <a href="#">автор</a></span>
-                <span class="read"><a href="javascript:void(0);">Читать...</a></span>
-                <span class="date-article">Дата статьи: ().().()</span>
-
-            </div>
-        </article>
+        <c:forEach var="article" items="${articles}">
+            <article>
+                <h1>${article.title}</h1>
+                <div class="text-article">
+                        ${fn:substring(article.text,0,300)} ...
+                </div>
+                <div class="fotter-article">
+                        <span class="read"><a href="article?id=${article.id}">
+                            Читать...</a></span>
+                    <span class="date-article">Дата статьи: ${article.date}</span>
+                </div>
+            </article>
+        </c:forEach>
     </section>
 </div>
-<footer>
-    <div>
-        <span>Тестовое приложение JAVA EE</span>
-    </div>
-</footer>
-</body>
-</html>
