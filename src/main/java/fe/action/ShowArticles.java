@@ -22,6 +22,7 @@ public class ShowArticles {
 
             // выбираем данные с БД
             ResultSet rs = statement.executeQuery(selectTableSQL);
+            List list = new ArrayList();
 
             // И если что то было получено то цикл while сработает
             while (rs.next()) {
@@ -30,7 +31,9 @@ public class ShowArticles {
                 articles.setTitle(rs.getString("TITLE"));
                 articles.setText(rs.getString("TEXT"));
                 articles.setDate(rs.getDate("DATE"));
-                //articles.setArticlesCollection(articles);
+                list.add(articles);
+
+                //articles.setArticlesCollection(articles);??????/
 
             }
         } catch (SQLException e) {
