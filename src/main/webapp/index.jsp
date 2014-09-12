@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <div id="main">
     <aside class="leftAside">
         <h2>Темы статей</h2>
@@ -14,6 +14,7 @@
         <c:forEach var="article" items="${articles}">
             <article>
                 <h1>${article.title}</h1>
+
                 <div class="text-article">
                         ${fn:substring(article.text,0,300)} ...
                 </div>
